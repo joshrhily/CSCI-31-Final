@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <div className="bg-gray-100 mx-2 p-5 border-red-600 border-4">
       <div className="flex justify-end gap-4 m-4 bg-red-200 border-red-600 border-4 p-2">
-        {menuItems.map((item) => (
+        {menuItems.map((item, index) => (
           <a
             key={index}
             href={item.href}
