@@ -8,7 +8,7 @@ export default function Products() {
       <Navbar />
       <div className="m-12 bg-gray-100 p-4 border-4 border-red-600">
         <PageTitle title="Products" />
-        <PageContent />
+        <PageContent content="We currently do not have any products to sell :(" />
       </div>
     </div>
   )
