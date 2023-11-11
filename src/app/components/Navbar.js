@@ -1,4 +1,4 @@
-import { ArrowsRightLeftIcon } from '@heroicons/react/24/solid'
+import { GlobeAltIcon } from '@heroicons/react/24/solid'
 
 const menuItems = [
   {
@@ -26,13 +26,13 @@ const menuItems = [
 export default function Navbar() {
   return (
     <div className="flex justify-between m-8">
-      <ArrowsRightLeftIcon className="h-8 w-8 text-red-600" />
+      <GlobeAltIcon className="h-12 w-12 text-white" />
       <div className="flex gap-4">
         {menuItems.map((item, index) => (
           <a
             key={index}
             href={item.href}
-            className="px-4 py-2 text-white bg-red-600 rounded-md shadow-md border-solid border-2 border-gray-200 hover:bg-red-700 active:bg-red-800"
+            className="px-4 py-2 text-black bg-gray-100 rounded-md shadow-md border-solid border-2 border-red-600 hover:bg-emerald-100 active:bg-red-100"
           >
             {item.title}
           </a>

@@ -4,11 +4,10 @@ import PageContent from '../components/PageContent'
 
 export default function Products() {
   return (
-    <div className="h-screen bg-gradient-to-r from-red-600 via-white to-emerald-600">
+    <div>
       <Navbar />
-      <div className="m-12 bg-gray-100 p-4 border-4 border-red-600">
+      <div>
         <PageTitle title="Products" />
-        <PageContent content="We currently do not have any products to sell :(" />
       </div>
     </div>
   )
