@@ -9,6 +9,7 @@ export default function About() {
       <Navbar />
       <div>
         <PageTitle title="About" />
+        <PageContent />
       </div>
     </div>
   )

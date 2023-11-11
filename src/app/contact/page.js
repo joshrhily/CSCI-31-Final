@@ -8,6 +8,7 @@ export default function About() {
       <Navbar />
       <div>
         <PageTitle title="Contact" />
+        <PageContent />
       </div>
     </div>
   )

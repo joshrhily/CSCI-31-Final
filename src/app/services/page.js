@@ -8,6 +8,7 @@ export default function Services() {
       <Navbar />
       <div>
         <PageTitle title="Services" />
+        <PageContent />
       </div>
     </div>
   )

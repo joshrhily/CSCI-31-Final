@@ -7,7 +7,7 @@ export default function Card({
   return (
     <div
       id="card"
-      className="flex flex-col p-4 max-w-xl max-h-sm border-solid border-2 border-red-600 m-8 rounded-lg bg-gray-100 shadow-lg hover:scale-110 "
+      className="flex flex-col p-4 max-w-xl max-h-sm border-solid border-2 border-red-600 m-8 rounded-lg bg-gray-100 shadow-lg transition ease-in-out hover:scale-110 "
     >
       <h1 className="text-3xl text-black font-bold pb-2">{title}</h1>
       <p className="text-black underline">{subtitle}</p>
