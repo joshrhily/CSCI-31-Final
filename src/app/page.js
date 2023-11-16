@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import PageTitle from './components/PageTitle'
 import PageContent from './components/PageContent'
 import Card from './components/card'
+import Footer from './components/footer'
 
 import { createClient } from '@supabase/supabase-js'
 
@@ -14,7 +15,7 @@ export default async function Home() {
   const { data: cards, error } = await supabase.from('cards').select()
 
   return (
-    <div>
+    <body>
       <Navbar />
       <div>
         <PageTitle title="Meet the Team" />
@@ -31,6 +32,9 @@ export default async function Home() {
           />
         ))}
       </div>
-    </div>
+      <footer>
+        <Footer />
+      </footer>
+    </body>
   )
 }

@@ -2,12 +2,12 @@ import Navbar from '../components/Navbar'
 import PageTitle from '../components/PageTitle'
 import PageContent from '../components/PageContent'
 
-export default function Services() {
+export default function Goals() {
   return (
     <div>
       <Navbar />
       <div>
-        <PageTitle title="Services" />
+        <PageTitle title="Goals" />
         <PageContent />
       </div>
     </div>

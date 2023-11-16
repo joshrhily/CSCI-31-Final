@@ -13,7 +13,7 @@ export default function Card({
       <p className="text-black underline">{subtitle}</p>
       <div className="flex flex-row">
         <img
-          className="object-contain h-48 w-48 mx-2 my-4 border-solid border-2 border-red-600 rounded-md object-contain"
+          className="h-48 w-48 mx-2 my-4 border-solid border-2 border-red-600 rounded-md object-contain"
           src={image}
         ></img>
         <p className="text-black pt-3 mx-2">{description}</p>
