@@ -1,24 +1,5 @@
 import { Table } from '@radix-ui/themes'
 
-const defautlColumns = [
-  {
-    title: 'Title',
-    key: 'title',
-  },
-  {
-    title: 'Subltitle',
-    key: 'subtitle',
-  },
-  {
-    title: 'Image',
-    key: 'image',
-  },
-  {
-    title: 'Description',
-    key: 'description',
-  },
-]
-
 const defaultRecords = [
   {
     title: 'Player Name',
@@ -33,20 +14,20 @@ export default function MyTable({ columns = defautlColumns, records = defaultRec
     <Table.Root>
       <Table.Header>
         <Table.Row>
-          {columns.map((column) => (
-            <Table.ColumnHeaderCell>{column.title}</Table.ColumnHeaderCell>
+          {columns.map((column, idx) => (
+            <Table.ColumnHeaderCell key={idx}>{column.title}</Table.ColumnHeaderCell>
           ))}
         </Table.Row>
       </Table.Header>
 
       <Table.Body>
         {records.map((record) => (
-          <Table.Row>
+          <Table.Row key={record.id}>
             {columns.map((column, idx) =>
               idx === 0 ? (
-                <Table.RowHeaderCell>{record[column.key]}</Table.RowHeaderCell>
+                <Table.RowHeaderCell key={`${record.id}-${idx}`}>{record[column.key]}</Table.RowHeaderCell>
               ) : (
-                <Table.Cell>{record[column.key]}</Table.Cell>
+                <Table.Cell key={`${record.id}-${idx}`}>{record[column.key]}</Table.Cell>
               )
             )}
           </Table.Row>
