@@ -1,4 +1,6 @@
 import { Inter } from 'next/font/google'
+import '@radix-ui/themes/styles.css'
+import { Theme, ThemePanel } from '@radix-ui/themes'
 import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 
@@ -12,7 +14,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gradient-to-b from-emerald-500 to-emerald-600`}>{children}</body>
+      <Theme appearance="light" accentColor="ruby">
+        <body className={`${inter.className} bg-gradient-to-b from-emerald-500 to-emerald-600`}>{children}</body>
+        {/* <ThemePanel /> */}
+      </Theme>
+      <Analytics />
     </html>
   )
 }
