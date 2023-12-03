@@ -7,7 +7,7 @@ import { GlobeAltIcon } from '@heroicons/react/24/solid'
 
 export default function Footer() {
   return (
-    <div>
+    <div className="mt-10">
       <hr className="mx-8 mt-8 border-double border-4"></hr>
       <div className="flex mt-4 mb-6 mx-6 p-4 justify-between">
         <div className="flex gap-4">

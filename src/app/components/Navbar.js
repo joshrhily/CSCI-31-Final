@@ -6,7 +6,7 @@ const menuItems = [
     href: '/',
   },
   {
-    title: 'About',
+    title: 'About Us',
     href: '/about',
   },
   {
@@ -18,8 +18,8 @@ const menuItems = [
     href: '/experience',
   },
   {
-    title: 'Goals',
-    href: '/goals',
+    title: 'News',
+    href: '/news',
   },
 ]
 

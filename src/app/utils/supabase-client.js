@@ -16,3 +16,9 @@ export async function findCards() {
   const { data: cards, error } = await supabase.from('cards').select()
   return cards
 }
+
+export async function findAboutContent() {
+  const supabase = getClient()
+  const { data: content, error } = await supabase.from('aboutContent').select()
+  return content
+}

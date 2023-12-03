@@ -14,10 +14,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Theme appearance="light" accentColor="ruby">
-        <body className={`${inter.className} bg-gradient-to-b from-emerald-500 to-emerald-600`}>{children}</body>
-        {/* <ThemePanel /> */}
-      </Theme>
+      <body className={`${inter.className} bg-gradient-to-b from-emerald-500 to-emerald-600`}>{children}</body>
+      {/* <ThemePanel /> */}
       <Analytics />
     </html>
   )

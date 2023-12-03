@@ -17,9 +17,10 @@ async function createCard(formData) {
   // call supabase-client insertCard
 }
 
+//className="my-12 mx-36 p-4 bg-emerald-400 rounded-xl"
 export default function CardForm() {
   return (
-    <form className="my-12 mx-36 p-4 bg-emerald-400 rounded-xl" action={createCard}>
+    <form action={createCard}>
       <Field>
         <Label htmlFor="title" label="Title" />
         <Input type="text" placeholder="Enter title..." name="title" id="title" />

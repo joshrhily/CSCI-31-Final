@@ -9,7 +9,26 @@ const defaultRecords = [
   },
 ]
 
-export default function MyTable({ columns = defautlColumns, records = defaultRecords }) {
+const cardTableColums = [
+  {
+    title: 'Title',
+    key: 'title',
+  },
+  {
+    title: 'Subltitle',
+    key: 'subtitle',
+  },
+  {
+    title: 'Image',
+    key: 'image',
+  },
+  {
+    title: 'Description',
+    key: 'description',
+  },
+]
+
+export default function MyTable({ columns = defautlColumns, records = cardTableColums }) {
   return (
     <Table.Root>
       <Table.Header>
