@@ -10,7 +10,7 @@ const menuItems = [
     href: '/about',
   },
   {
-    title: 'Contact',
+    title: 'Contact Us',
     href: '/contact',
   },
   {

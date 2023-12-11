@@ -1,44 +1,41 @@
-import { insertCard } from '../utils/supabase-client'
 import Field from './field'
 import Label from './label'
 import Input from './input'
 import Button from './button'
 import { redirect } from 'next/navigation'
+import { insertFormData } from '../utils/supabase-client'
 
-async function createCard(formData) {
+export async function getFormData(formData) {
   'use server'
-  // get each field out of formData
-  const title = formData.get('title')
-  const subtitle = formData.get('subtitle')
-  const image = formData.get('image')
-  const description = formData.get('description')
-  insertCard({ title, subtitle, image, description })
+  const name = formData.get('name')
+  const email = formData.get('email')
+  const experience = formData.get('experience')
+  const feedback = formData.get('feedback')
+  insertFormData({ name, email, experience, feedback })
   redirect('/')
-  // call supabase-client insertCard
 }
 
-//className="my-12 mx-36 p-4 bg-emerald-400 rounded-xl"
-export default function CardForm() {
+export default function feedbackForm() {
   return (
-    <form action={createCard}>
+    <form className="m-12 p-12 bg-emerald-200 border-red-600 border-2 rounded-lg" action={getFormData}>
       <Field>
-        <Label htmlFor="title" label="Title" />
-        <Input type="text" placeholder="Enter title..." name="title" id="title" />
+        <Label htmlFor="name" label="Name" />
+        <Input type="text" placeholder="Enter full name..." name="name" id="name" />
       </Field>
       <Field>
-        <Label htmlFor="subtitle" label="Subtitle" />
-        <Input type="text" placeholder="Enter subtitle..." name="subtitle" id="subtitle" />
+        <Label htmlFor="email" label="Email" />
+        <Input type="text" placeholder="Enter email address..." name="email" id="email" />
       </Field>
       <Field>
-        <Label htmlFor="image" label="Image URL" />
-        <Input type="text" placeholder="Enter image URL..." name="image" id="image" />
+        <Label htmlFor="experience" label="Volleyball Experience" />
+        <Input type="text" placeholder="Enter volleyball experience..." name="experience" id="experience" />
       </Field>
       <Field>
-        <Label htmlFor="description" label="Description" />
-        <Input type="text" placeholder="Enter description..." name="description" id="description" />
+        <Label htmlFor="feedback" label="Question/Feedback" />
+        <Input type="text" placeholder="Enter questions and/or feedback..." name="feedback" id="feedback" />
       </Field>
       <div className="flex justify-end">
-        <Button type="submit">Add Card</Button>
+        <Button type="submit">Submit</Button>
       </div>
     </form>
   )

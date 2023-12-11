@@ -5,9 +5,9 @@ export function getClient() {
   return supabase
 }
 
-export async function insertCard(card) {
+export async function insertFormData(formData) {
   const supabase = getClient()
-  const { error } = await supabase.from('cards').insert(card)
+  const { error } = await supabase.from('feedback').insert(formData)
 }
 
 export async function findCards() {
@@ -21,4 +21,16 @@ export async function findAboutContent() {
   const supabase = getClient()
   const { data: content, error } = await supabase.from('aboutContent').select()
   return content
+}
+
+export async function findTourneys() {
+  const supabase = getClient()
+  const { data: tourneys, error } = await supabase.from('tourneys').select()
+  return tourneys
+}
+
+export async function findNews() {
+  const supabase = getClient()
+  const { data: news, error } = await supabase.from('news').select()
+  return news
 }
